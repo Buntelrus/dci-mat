@@ -1,0 +1,17 @@
+{
+  "name": "dci-mat",
+  "version": "1.0.0",
+  "description": "mat course",
+  "main": "main.ts",
+  "author": "Buntel <julianbantel@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "npx tsc -w && npx node-sass -w sass/ -o /dist --recursive"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "sass": "^1.54.5",
+    "typescript": "^4.7.4"
+  }
+}
