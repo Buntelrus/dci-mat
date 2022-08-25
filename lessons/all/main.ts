@@ -9,7 +9,6 @@ window.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(event.target! as HTMLFormElement)
             const resultsList = document.getElementById('results')!
             resultsList.innerHTML = '' //clear old results
-            console.log(formData, resultsList)
             formData.forEach((value, key) => {
                 const li = document.createElement('li')
                 li.innerText = `${key} => ${value}`
