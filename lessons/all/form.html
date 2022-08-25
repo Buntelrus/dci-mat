@@ -7,45 +7,197 @@
     <script src="dist/main.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Forms:</h1>
-  </header>
-  <main class="forms">
-    <section>
-      <h2>My Form:</h2>
-      <form id="myform" action="#">
-        <label for="firstname">Vorname:</label>
-        <input id="firstname" name="firstname" type="text">
+<header>
+    <h1>Klimawandel:</h1>
+</header>
+<main class="forms">
+    <!--      if understood correctly, I can set rel=nofollow because my js handles form submission and we will not generate another request-->
+    <form id="myform" name="climate-change" action="#" autocomplete="on" rel="nofollow">
+        <section>
+            <h2>Ihre Meinung zum Klimawandel:</h2>
+            <section>
+                <h3>Ihre Daten:</h3>
+                <p>
+                    <label for="firstname">Vorname:</label>
+                    <input id="firstname" name="firstname" type="text">
 
-        <label for="surename">Nachname:</label>
-        <input id="surename" name="surename" type="text">
-        <br>
-        <p>Magst du Eiscreme?</p>
-        <input id="yes" name="icecream-yes" type="checkbox">
-        <label for="yes">Ja</label>
-        <input id="no" name="icecream-no" type="checkbox">
-        <label for="no">Nein</label>
-        <br>
-        <p>Welches ist dein Lieblingstier?</p>
-        <label for="dog">Hund</label>
-        <input id="dog" name="animal" type="radio" value="dog">
-        <label for="cat">Katze</label>
-        <input id="cat" name="animal" type="radio" value="cat">
-        <label for="mouse">Maus</label>
-        <input id="mouse" name="animal" type="radio" value="mouse">
-        <br>
-        <br>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <button type="submit">submit</button>
-      </form>
-    </section>
+                    <label for="surename">Nachname:</label>
+                    <input id="surename" name="surename" type="text">
+                </p>
+                <p>
+                    <label for="mail">Email:</label>
+                    <input id="mail" name="mail" type="text">
+
+                    <label for="phone">Tel:</label>
+                    <input id="phone" name="phone" type="text">
+                </p>
+            </section>
+            <section>
+                <h3>Ihre Einschätzung:</h3>
+                <section>
+                    <h4>Was halten Sie vom Klimawandel?</h4>
+                    <p>
+                        <input
+                                id="climate-change-admit-deny"
+                                name="climate-change-admission"
+                                value="deny"
+                                type="radio"
+                        >
+                        <label for="climate-change-admit-deny">Was!? Klimawandel?</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-admit-resign"
+                                name="climate-change-admission"
+                                value="resign"
+                                type="radio"
+                        >
+                        <label for="climate-change-admit-resign">das Klima verändert sich, ganz normal!</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-admit-admit"
+                                name="climate-change-admission"
+                                value="admit"
+                                type="radio"
+                        >
+                        <label for="climate-change-admit-admit">der anthropogene Klimawandel existiert.</label>
+                    </p>
+                </section>
+                <section>
+                    <h4>Welche Folgen hat der Klimawandel Ihrer Meinung nach?</h4>
+                    <p>
+                        <input
+                                id="climate-change-outcome-1"
+                                name="climate-change-outcome"
+                                value="1"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-1">steigende Maximaltemperaturen</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-outcome-2"
+                                name="climate-change-outcome"
+                                value="2"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-2">steigende Minimaltemperaturen</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-outcome-3"
+                                name="climate-change-outcome"
+                                value="3"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-3">steigender Meeresspiegel</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-outcome-4"
+                                name="climate-change-outcome"
+                                value="4"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-4">höhere Meerestemperaturen</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-outcome-5"
+                                name="climate-change-outcome"
+                                value="5"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-5">zunehmende Starkniederschläge (Starkregen und
+                            Hagel)</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-outcome-6"
+                                name="climate-change-outcome"
+                                value="6"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-6">Zunahme des Anteils heftiger tropischer
+                            Wirbelstürme</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-outcome-7"
+                                name="climate-change-outcome"
+                                value="7"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-7">Zunahme von Trockenheit und Dürre</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-outcome-8"
+                                name="climate-change-outcome"
+                                value="8"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-8">Rückgang des arktischen Meereises und der
+                            Schneebedeckung</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-outcome-9"
+                                name="climate-change-outcome"
+                                value="9"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-9">Gletscherschwund und Gletscherrückgang</label>
+                    </p>
+                    <p>
+                        <input
+                                id="climate-change-outcome-10"
+                                name="climate-change-outcome"
+                                value="10"
+                                type="checkbox"
+                        >
+                        <label for="climate-change-outcome-10">tauender Permafrost</label>
+                    </p>
+                </section>
+            </section>
+            <section>
+                <h3>Ihre Meinung:</h3>
+                <p>
+                    <label for="opinion">Schreiben Sie uns Ihre detaillierte Meinung zum Thema</label>
+                    <textarea
+                            id="opinion"
+                            name="opinion"
+                    >Ihre Meinung ist uns wichtig...</textarea>
+                </p>
+<!--                didn't work as expected-->
+<!--                <p>-->
+<!--                    <label for="how-bad-is-it">Wie schlimm ist der Klimawandel Ihrer Meinung nach</label>-->
+<!--                    <input-->
+<!--                            id="how-bad-is-it"-->
+<!--                            name="how-bad-is-it"-->
+<!--                            type="image"-->
+<!--                            src="https://external-preview.redd.it/WF3Y3sKJ2aV0oCeLjEwq_VCFBOw1dFDL5c7TUq_gm_I.png?auto=webp&s=ce86501508f7a74622727e9c52ff7b07656ff868" alt="enter climate change status"-->
+<!--                    >-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <small><i>leider habe ich keine bessere Grafik gefunden, aber ich wollte diesen Input-Typ unbedingt mal ausprobieren</i></small>-->
+<!--                </p>-->
+            </section>
+            <p>
+                <label for="mind-change-possibility">Wie wahrscheinlich ist es, dass sich Ihre Meinung in Zukunft ändern könnte?</label>
+                <input id="mind-change-possibility" name="mind-change-possibility" type="range" min="0" max="100">
+            </p>
+            <button type="submit">submit</button>
+        </section>
+    </form>
     <section>
-      <h2>Results:</h2>
-      <ul id="results"></ul>
+        <h2>Results:</h2>
+        <ul id="results"></ul>
     </section>
-  </main>
-  <footer>
+</main>
+<footer>
     <h6>Dies war das Formular</h6>
-  </footer>
+</footer>
 </body>
 </html>

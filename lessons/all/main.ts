@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
         shuffleButton.addEventListener('click', shuffleList)
     } else if(document.querySelector('.forms')) {
         const form = document.getElementById('myform')!
+        // show form results
         form.addEventListener('submit', event => {
             event.preventDefault()
             const formData = new FormData(event.target! as HTMLFormElement)
@@ -25,6 +26,7 @@ function shuffleList(event: MouseEvent): void {
     shuffle(children)
     children.forEach(child => list.append(child))
 }
+
 /**
  * Shuffles array in place. ES6 version
  * @param {Array} a items An array containing the items.
