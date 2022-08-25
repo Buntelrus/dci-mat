@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="dist/main.css">
+    <script src="dist/main.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Forms:</h1>
+  </header>
+  <main class="forms">
+    <section>
+      <h2>My Form:</h2>
+      <form id="myform" action="#">
+        <label for="firstname">Vorname:</label>
+        <input id="firstname" name="firstname" type="text">
+
+        <label for="surename">Nachname:</label>
+        <input id="surename" name="surename" type="text">
+        <br>
+        <p>Magst du Eiscreme?</p>
+        <input id="yes" name="icecream-yes" type="checkbox">
+        <label for="yes">Ja</label>
+        <input id="no" name="icecream-no" type="checkbox">
+        <label for="no">Nein</label>
+        <br>
+        <p>Welches ist dein Lieblingstier?</p>
+        <label for="dog">Hund</label>
+        <input id="dog" name="animal" type="radio" value="dog">
+        <label for="cat">Katze</label>
+        <input id="cat" name="animal" type="radio" value="cat">
+        <label for="mouse">Maus</label>
+        <input id="mouse" name="animal" type="radio" value="mouse">
+        <br>
+        <br>
+        <button type="submit">submit</button>
+      </form>
+    </section>
+    <section>
+      <h2>Results:</h2>
+      <ul id="results"></ul>
+    </section>
+  </main>
+  <footer>
+    <h6>Dies war das Formular</h6>
+  </footer>
+</body>
+</html>

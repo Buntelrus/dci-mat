@@ -1,10 +1,21 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const recipe = document.querySelector('.recipe')
-    if (recipe) {
+    if (document.querySelector('.recipe')) {
         const shuffleButton: HTMLButtonElement = document.querySelector('.fun-zone button')!
         shuffleButton.addEventListener('click', shuffleList)
-    } else {
-        console.log('not list.html')
+    } else if(document.querySelector('.forms')) {
+        const form = document.getElementById('myform')!
+        form.addEventListener('submit', event => {
+            event.preventDefault()
+            const formData = new FormData(event.target! as HTMLFormElement)
+            const resultsList = document.getElementById('results')!
+            resultsList.innerHTML = '' //clear old results
+            console.log(formData, resultsList)
+            formData.forEach((value, key) => {
+                const li = document.createElement('li')
+                li.innerText = `${key} => ${value}`
+                resultsList.append(li)
+            })
+        })
     }
 })
 
