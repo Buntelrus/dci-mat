@@ -17,17 +17,78 @@
             <li><a href="form.html">Form</a></li>
         </ul>
     </nav>
-    <h1>CSS and SASS</h1>
+    <h1>Deployment mit Github</h1>
 </header>
 <main class="styles">
-    <div>
+    <section>
+        <h2>
+            <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#about-github-pages">
+                About GitHub Pages
+            </a>
+        </h2>
+        <p>GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a
+            repository on GitHub, optionally runs the files through a build process, and publishes a website. You can
+            see examples of GitHub Pages sites in the <a href="https://github.com/collections/github-pages-examples">GitHub
+                Pages examples collection</a>.</p>
+        <p>You can host your site on GitHub's <code>github.io</code> domain or your own custom domain. For more
+            information, see "<a href="/en/articles/using-a-custom-domain-with-github-pages">Using a custom domain with
+                GitHub Pages</a>."</p>
+        <p>You can create GitHub Pages sites that are publicly available on the internet. Organizations that use GitHub
+            Enterprise Cloud can also publish sites privately by managing access control for the site.
+            For more information, see
+            "<a href="/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site">Changing
+                the visibility of your GitHub Pages site</a>" in the GitHub Enterprise Cloud documentation.</p>
+        <p>To get started, see "<a href="/en/articles/creating-a-github-pages-site">Creating a GitHub Pages site</a>."
+        </p>
+        <p>Organization owners can disable the publication of GitHub Pages sites from the organization's repositories.
+            For more information, see
+            "<a href="/en/organizations/managing-organization-settings/managing-the-publication-of-github-pages-sites-for-your-organization">Managing
+                the publication of GitHub Pages sites for your organization</a>."</p>
+    </section>
+
+    <section>
+        <h2>
+            <a aria-hidden="" tabindex="-1" class="doctocat-link" href="#publishing-sources-for-github-pages-sites">
+
+                Publishing sources for GitHub Pages sites
+            </a>
+        </h2>
+        <div class="extended-markdown warning border rounded-1 mb-4 p-3 color-border-danger color-bg-danger f5">
+            <p><strong>Warning</strong>: GitHub Pages sites are publicly available on the internet, even if the
+                repository for the site is private. If you have sensitive data in your site's repository, you may want
+                to remove the data before publishing. For more information, see
+                "<a href="/en/repositories/creating-and-managing-repositories/about-repositories#about-repository-visibility">About
+                    repositories</a>."</p>
+        </div>
+        <p>You can publish your site when changes are pushed to a specific branch, or you can write a GitHub Actions
+            workflow to publish your site.</p>
+        <p>If you do not need any control over the build process for your site, we recommend that you publish your site
+            when changes are pushed to a specific branch. You can specify which branch and folder to use as your
+            publishing source. The source branch can be any branch in your repository, and the source folder can either
+            be the root of the repository (<code>/</code>) on the source branch or a <code>/docs</code> folder on the
+            source branch. Whenever changes are pushed to the source branch, the changes in the source folder will be
+            published to your GitHub Pages site.</p>
+        <p>If you want to use a build process other than Jekyll or you do not want a dedicated branch to hold your
+            compiled static files, we recommend that you write a GitHub Actions workflow to publish your site. GitHub
+            provides starter workflows for common publishing scenarios to help you write your workflow.</p>
+        <p>For more information, see
+            "<a href="/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Configuring
+                a publishing source for your GitHub Pages site</a>."</p>
+    </section>
+    <section>
+        <h2>Quellen</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam architecto autem commodi deserunt doloribus eaque enim esse illum impedit maiores nemo neque, optio pariatur repellat saepe velit voluptate? Architecto corporis, delectus enim esse, est, harum ipsam itaque laborum modi molestias nesciunt optio quae quam recusandae reiciendis rem velit? Autem consectetur illo itaque iure magnam minima quae! Ab ad adipisci asperiores beatae consequatur culpa ducimus eos esse, excepturi facilis in inventore iusto laudantium magni maiores modi molestias mollitia, nihil odio perferendis quaerat ratione repellendus reprehenderit saepe sed sunt tempora! Architecto aspernatur commodi cumque cupiditate dignissimos distinctio dolore dolorem est eveniet ex facilis hic id illum in incidunt iure labore laboriosam, maxime natus nihil nostrum obcaecati optio perspiciatis possimus ratione sunt tempore velit. Animi architecto atque autem beatae dolore eaque enim eos, esse eveniet fugiat in inventore iste laboriosam natus nisi optio quae quis ratione reiciendis similique soluta tempora, vero voluptates. Alias aliquam aliquid asperiores doloribus facere natus quam unde veniam! A corporis dolore facere id nesciunt nobis placeat quos. Accusantium architecto atque blanditiis consectetur consequatur, cumque cupiditate debitis deserunt distinctio doloribus dolorum eum eveniet labore laboriosam magnam minus necessitatibus non porro, praesentium reprehenderit repudiandae sit tempore ullam vitae voluptatibus.
+            Hier gibt's den Link zum kompletten <a href="https://github.com/Buntelrus/dci-mat">Repository</a>
         </p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores delectus deserunt provident quibusdam voluptate! Ab dolor est fugiat impedit ipsa nihil suscipit. Accusamus aliquid amet at atque aut autem cumque delectus deserunt earum esse exercitationem, fuga in nesciunt nulla obcaecati, pariatur, praesentium quos repellat rerum saepe sint temporibus ullam ut. Beatae consequatur cumque doloremque dolores eligendi et fuga labore, minima non pariatur perspiciatis quas quibusdam ratione, soluta sunt, tenetur totam. A ab accusamus adipisci amet animi architecto aut consequuntur corporis cum dicta distinctio dolor dolorem, eligendi enim esse expedita fuga id in itaque minima minus molestiae natus necessitatibus nulla obcaecati omnis optio perferendis perspiciatis quas qui repudiandae tempora temporibus ullam unde ut vitae voluptatibus! Eos illo maxime natus officia quae rem sapiente sit ullam. Architecto distinctio eos ex facere ipsum nulla officia voluptas! Aliquam aspernatur culpa cupiditate esse explicabo reiciendis, reprehenderit sunt voluptate voluptatum? Consequatur explicabo illo illum ipsam modi pariatur quas quis quos ratione voluptates? Aliquam consequuntur culpa deleniti distinctio dolores, dolorum earum enim facere fuga id illum impedit inventore ipsa iusto labore magni molestiae mollitia nam nemo nisi pariatur quasi quibusdam, quos sint tenetur totam ut? Aliquid assumenda dicta esse eum fugiat incidunt minus omnis repudiandae, saepe vitae.
+            Wer nur am Code für diese Website interessiert ist, der findet hier den
+            <a href="https://github.com/Buntelrus/dci-mat/tree/main/lessons/all">Code zur Website</a>
         </p>
-    </div>
+        <p>
+            Die <a href="https://buntelrus.github.io/dci-mat/styles.html">Live Version</a> kann man sich natürlich auch
+            anschauen.
+        </p>
+    </section>
 </main>
 <footer></footer>
 </body>
