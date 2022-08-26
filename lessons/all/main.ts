@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.recipe')) {
         const shuffleButton: HTMLButtonElement = document.querySelector('.fun-zone button')!
         shuffleButton.addEventListener('click', shuffleList)
-    } else if(document.querySelector('.forms')) {
+    } else if (document.querySelector('.forms')) {
         const form = document.getElementById('myform')!
         // show form results
         form.addEventListener('submit', event => {
