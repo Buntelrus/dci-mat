@@ -7,7 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "npx tsc -w && npx node-sass -w sass/ -o /dist --recursive"
+    "dev": "npx tsc -w && npx node-sass -w sass/ -o dist --recursive",
+    "build": "npx tsc && npx node-sass sass/ -o dist --recursive"
   },
   "devDependencies": {
     "node-sass": "^7.0.1",
