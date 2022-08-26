@@ -16,6 +16,18 @@ window.addEventListener('DOMContentLoaded', () => {
                 resultsList.append(li)
             })
         })
+    } else if (document.querySelector('.styles')) {
+        const h1 = document.querySelector('h1')!
+        const colors = ['#F5CCE8', '#EC9DED', '#C880B7', '#9F6BA0', '#4A2040']
+        let i = 0
+        setInterval(() => {
+            h1.style.backgroundColor = colors[i]
+            if (i + 1 < colors.length) {
+                i++
+            } else {
+                i = 0
+            }
+        }, 500)
     }
 })
 
