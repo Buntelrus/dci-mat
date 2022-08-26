@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
             } else {
                 i = 0
             }
-        }, 500)
+        }, 2000)
     }
 })
 
