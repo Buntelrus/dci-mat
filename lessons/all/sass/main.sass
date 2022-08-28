@@ -45,13 +45,19 @@ h2:after
     width: 50%
     border: solid 1px $color1
 
-a:not(.contains-img)
+a
   text-decoration: none
   color: $accent2
-  border: solid 0.5px $background2
 
   &:hover
-    border: solid 0.5px $accent2
+    color: lighten($accent2, 10%)
+
+nav li > a
+  border: solid 1px $background2
+
+  &:hover
+    border: solid 1px $accent2
+    font-weight: initial
 
 ol, ul
   padding: 0 0 0 $gap-small
@@ -72,7 +78,7 @@ ul > li
 
 
 
-nav
+nav.nav-bar
   display: inline
   text-align: center
 
@@ -133,12 +139,16 @@ section > section > *:not(h2,h3,h4,h5,h6)
     height: 30rem
     object-fit: cover
 
+// list.html
+
 .recipe
   img
     height: 30rem
     width: 100%
     object-fit: cover
     object-position: 50% 58%
+
+// form.html
 
 .forms
   textarea
