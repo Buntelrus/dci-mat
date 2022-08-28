@@ -1,4 +1,16 @@
+@import "variables"
+@import "mixins"
+
 h1:after
     transition: border-color 2s
     transition-timing-function: linear
 
+div.warning
+    @include border
+    background-color: darken($color2, 10%)
+
+section > p
+    padding-left: $gap-small
+
+    &:first-of-type
+        color: #2cddce
