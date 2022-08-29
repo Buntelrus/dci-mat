@@ -1,0 +1,39 @@
+@font-face
+  font-family: Asap
+  src: url("../fonts/Asap-VariableFont_wght.ttf")
+
+body
+  position: relative
+  font-family: Asap, sans-serif
+
+.hex
+  color: #F8F8F8
+.rgb
+  color: rgb(248, 248, 248)
+.rgba
+  color: rgb(248, 248, 248, 1)
+.hsl
+  color: hsl(0deg, 0%, 97%)
+
+.background
+  $gap: 3rem
+
+  position: absolute
+  z-index: -1
+  width: calc(100% + 2 * #{$gap})
+  height: 100vh
+  margin: -1.5rem -#{$gap} 0 -#{$gap}
+  background-image: url("https://images.unsplash.com/photo-1502807521734-c36e42763f7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1588&q=80")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position-y: -332px
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    background-color: rgba(0, 0, 0, 0.75)
+    width: 100%
+    height: 100%

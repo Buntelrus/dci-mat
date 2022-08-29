@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS background property</title>
+    <link rel="stylesheet" href="dist/background.css">
+    <link rel="stylesheet" href="dist/main.css">
+    <script src="dist/main.js"></script>
+</head>
+<body>
+<div class="background"></div>
+<header>
+    <h1>CSS background property</h1>
+</header>
+<main>
+    <article>
+        <h2>Einleitung</h2>
+        <p>
+            Jeder kommende Abschnitt wurde mit der entsprechenden Methode im CSS gestylt. Also der Abschnitt mit der
+            Überschrift Hex Color verwendet im CSS nur Farben, die mit dem Hex Code angegeben wurden. Die anderen
+            Abschnitte
+            definieren Ihre Farbe dementsprechend mit <span>rgb()</span> oder <span>rgba</span>.
+        </p>
+    </article>
+    <article class="hex">
+        <h2>CSS Hex Color</h2>
+        <p>
+            Hexadecimal color values are also supported in all browsers.
+
+            A hexadecimal color is specified with: #RRGGBB.
+
+            RR (red), GG (green) and BB (blue) are hexadecimal integers between 00 and FF specifying the intensity of
+            the color.
+
+            For example, #0000FF is displayed as blue, because the blue component is set to its highest value (FF) and
+            the others are set to 00.
+        </p>
+    </article>
+    <article class="rgb">
+        <h2>CSS RGB Color</h2>
+        <p>
+            RGB color values are supported in all browsers.
+
+            An RGB color value is specified with: rgb(red, green, blue).
+
+            Each parameter (red, green, and blue) defines the intensity of the color as an integer between 0 and 255.
+
+            For example, rgb(0, 0, 255) is rendered as blue, because the blue parameter is set to its highest value
+            (255) and the others are set to 0.
+        </p>
+    </article>
+    <article class="rgba">
+        <h2>CSS RGBA Color</h2>
+        <p>
+            Das A in RBBA steht für den Alphakanal. Damit ist es möglich Transparenz darzustellen. 1 Meint in diesem
+            Fall nicht durchsichtig. 0 komplett durchlässig.
+    </article>
+    <article class="hls">
+        <h2>CSS HLS Color</h2>
+        <p>
+            HSL color values are supported in IE9+, Firefox, Chrome, Safari, and in Opera 10+.
+
+            HSL stands for hue, saturation, and lightness.
+
+            HSL color values are specified with: hsl(hue, saturation, lightness).
+        </p>
+    </article>
+</main>
+<footer>
+</footer>
+</body>
+</html>
