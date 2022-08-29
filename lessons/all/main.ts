@@ -29,6 +29,22 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         }, 2000)
     }
+
+    //background.html
+
+    const navButtons = document.querySelectorAll("[id^='open-']")
+    navButtons.forEach(button => button.addEventListener('click', event => {
+        const button: HTMLButtonElement = event.target as HTMLButtonElement
+        const openId = button.id.split('-').pop()!
+
+        document.querySelectorAll('section[id]').forEach(section => section.classList.add('hidden'))
+
+        const openEl = document.getElementById(openId)
+
+        if (!openEl) throw 'openEl not found'
+
+        openEl.classList.remove('hidden')
+    }))
 })
 
 function shuffleList(event: MouseEvent): void {

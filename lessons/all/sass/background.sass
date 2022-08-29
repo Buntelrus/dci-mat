@@ -1,3 +1,5 @@
+@import "mixins"
+
 @font-face
   font-family: Asap
   src: url("../fonts/Asap-VariableFont_wght.ttf")
@@ -5,6 +7,12 @@
 body
   position: relative
   font-family: Asap, sans-serif
+
+h2
+  font-size: 2rem
+
+h3
+  font-size: 1.5rem
 
 .hex
   color: #F8F8F8
@@ -37,3 +45,27 @@ body
     background-color: rgba(0, 0, 0, 0.75)
     width: 100%
     height: 100%
+
+
+//Assignment6
+
+.hidden
+  display: none
+
+nav > ul > li > a
+  $trans:  rgba(0, 0, 0, 0.1)
+
+  float: right
+  @include border
+  border: none
+  background-color: $trans
+
+section.margin-center
+  margin: auto 5rem
+
+section.border
+  border: solid 1px rgba(255, 255, 255, 0.3)
+  padding: 0 1.5rem
+
+section.padding
+  padding: 0 15rem
