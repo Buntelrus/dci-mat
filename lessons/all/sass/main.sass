@@ -1,17 +1,20 @@
 @import "variables"
 @import "mixins"
+@import "themes/light"
+
+@import "functions"
 
 //Allgemeine Styles
 
-html, body
-  //height: 100%
-  //margin: 0
+html
+  @include applyTheme($theme)
+
 *
   box-sizing: border-box
 
 body
-  background-color: $background1
-  color: $color1
+  @include themeable(background-color, background1)
+  @include themeable(color, color1)
   max-width: 50rem
   margin: 0 auto $gap-small auto
 
@@ -23,27 +26,30 @@ h1
     display: block
     margin: $gap-small / 2 auto $gap-medium auto
     width: 90%
-    border: solid 1px var(--c, $accent2)
+    border: solid 1px
+    @include themeable('border-color', accent2)
 
 h2:after
     content: ''
     display: block
     margin: $gap-small / 2 auto $gap-medium 0
     width: 50%
-    border: solid 1px $color1
-
+    border: solid 1px
+    @include themeable(border-bottom-color, color1)
 a
   text-decoration: none
-  color: $accent2
+  @include themeable(color, accent2)
 
   &:hover
-    color: lighten($accent2, 10%)
+    @include themeable(color, linkhover)
 
 nav li > a
-  border: solid 1px $background2
+  border: solid 1px
+  @include themeable('border-color', background2)
 
   &:hover
-    border: solid 1px $accent2
+    border: solid 1px
+    @include themeable('border-color', accent2)
     font-weight: initial
 
 ol, ul
@@ -72,7 +78,7 @@ nav.nav-bar
   ul
     @include border
     padding: 0
-    background-color: $background2
+    @include themeable(background-color, background2)
     margin: $gap-medium 0
 
     li
@@ -105,7 +111,7 @@ section > section > *:not(h2,h3,h4,h5,h6)
 
     li > a
       display: block
-      background-color: $background2
+      @include themeable(background-color, background2)
       @include border
       padding-top: 50%
 
@@ -115,7 +121,7 @@ section > section > *:not(h2,h3,h4,h5,h6)
         padding-bottom: 50%
 
     span
-      color: $color1
+      @include themeable(color, color1)
       margin-right: $gap-small
 
 // dragon.html

@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const colors = ['hsl(300deg, 100%, 76%)', 'hsl(335deg, 100%, 76%)', 'hsl(275deg, 100%, 76%)', 'hsl(194deg, 100%, 76%)']
         let i = 0
         setInterval(() => {
-            h1.style.setProperty('--c', colors[i])
+            h1.style.setProperty('--accent2', colors[i])
             if (i + 1 < colors.length) {
                 i++
             } else {

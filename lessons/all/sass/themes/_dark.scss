@@ -1,0 +1,11 @@
+//Using scss because ability to define multiline maps
+$theme: (
+  background2: #0E141B,
+  background1: darken(#0E141B, 15%),
+  color1: #F8F8F8,
+  color2: #520013,
+  accent1: #DD2D4A,
+  accent2: #85E2FF,
+  warning: darken(#520013, 10%),
+  linkhover: lighten(#85E2FF, 10%)
+)

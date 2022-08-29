@@ -1,5 +1,8 @@
 @import "variables"
 @import "mixins"
+@import "themes/dark"
+
+@import "functions"
 
 h1:after
     transition: border-color 2s
@@ -7,7 +10,7 @@ h1:after
 
 div.warning
     @include border
-    background-color: darken($color2, 10%)
+    @include themeable(background-color, warning)
 
 section > p
     padding-left: $gap-small
