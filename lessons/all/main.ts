@@ -34,6 +34,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const navButtons = document.querySelectorAll("[id^='open-']")
     navButtons.forEach(button => button.addEventListener('click', event => {
+        event.preventDefault()
+
         const button: HTMLButtonElement = event.target as HTMLButtonElement
         const openId = button.id.split('-').pop()!
 
