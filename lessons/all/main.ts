@@ -32,21 +32,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //background.html
 
-    const navButtons = document.querySelectorAll("[id^='open-']")
-    navButtons.forEach(button => button.addEventListener('click', event => {
-        event.preventDefault()
+    // can't figure out how to style a default target in css, so we redirect to it with javascript
+    const navButton = document.querySelector("[id^='open-']")
+    if (navButton) {
+        window.open('#assignment5', '_self')
+    }
 
-        const button: HTMLButtonElement = event.target as HTMLButtonElement
-        const openId = button.id.split('-').pop()!
-
-        document.querySelectorAll('section[id]').forEach(section => section.classList.add('hidden'))
-
-        const openEl = document.getElementById(openId)
-
-        if (!openEl) throw 'openEl not found'
-
-        openEl.classList.remove('hidden')
-    }))
 })
 
 function shuffleList(event: MouseEvent): void {
