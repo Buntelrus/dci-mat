@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ProjectTasksOptions">
     <TaskOptions isEnabled="true">
-      <option name="arguments" value="$FileName$:$ProjectFileDir$/lessons/all/dist/$FileNameWithoutExtension$.css" />
+      <option name="arguments" value="$FileName$:$ProjectFileDir$/dist/$FileNameWithoutExtension$.css" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
       <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="sass" />
       <option name="immediateSync" value="true" />
       <option name="name" value="Sass" />
-      <option name="output" value="$ProjectFileDir$/lessons/all/dist/$FileNameWithoutExtension$.css:$ProjectFileDir$/lessons/all/dist/$FileNameWithoutExtension$.css.map" />
+      <option name="output" value="$ProjectFileDir$/dist/$FileNameWithoutExtension$.css:$ProjectFileDir$/dist/$FileNameWithoutExtension$.css.map" />
       <option name="outputFilters">
         <array />
       </option>
       <option name="outputFromStdout" value="false" />
-      <option name="program" value="$PROJECT_DIR$/lessons/all/node_modules/sass/sass.js" />
+      <option name="program" value="$PROJECT_DIR$/node_modules/sass/sass.js" />
       <option name="runOnExternalChanges" value="true" />
       <option name="scopeName" value="Project Files" />
       <option name="trackOnlyRoot" value="true" />
