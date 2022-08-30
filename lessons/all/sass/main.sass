@@ -102,27 +102,35 @@ section > section > *:not(h2,h3,h4,h5,h6)
 .assignments
   margin: $gap-large
 
+  //display: grid
+
+  //ul
+  //  display: grid
+  //  grid-template-columns: auto auto
+  //  row-gap: $gap-small
+  //  column-gap: $gap-small
+  //
+  //  li > a
+  //    display: block
+  //    @include themeable(background-color, background2)
+  //    @include border
+
   ul
-    display: grid
-    grid-template-columns: auto auto
-    row-gap: $gap-small
-    column-gap: $gap-small
-    width: 100%
+    display: flex
+    flex-flow: wrap
+    justify-content: space-between
 
-    li > a
-      display: block
-      @include themeable(background-color, background2)
-      @include border
-      padding-top: 50%
+  li
+    width: calc(50% - #{$gap-small / 2})
 
-      &:after
-        content: ''
-        display: block
-        padding-bottom: 50%
+  li > a
+    display: block
+    @include themeable(background-color, background2)
+    @include border
 
-    span
-      @include themeable(color, color1)
-      margin-right: $gap-small
+  span
+    @include themeable(color, color1)
+    margin-right: $gap-small
 
 // dragon.html
 
