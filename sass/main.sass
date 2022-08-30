@@ -1,0 +1,13 @@
+@import "variables"
+@import "mixins"
+@import "themes/dark"
+
+@import "functions"
+
+//Allgemeine Styles
+
+html
+  @include applyTheme($theme)
+
+*
+  box-sizing: border-box
