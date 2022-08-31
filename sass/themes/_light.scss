@@ -1,11 +1,9 @@
 //Using scss because ability to define multiline maps
 $theme: (
-  background2: rgb(207, 162, 112),
-  background1: lighten(rgb(28, 22, 15), 15%),
-  color1: #080808,
-  color2: #ad0028,
-  accent1: #072107,
-  accent2: #ff8585,
-  warning: lighten(#ad0028, 10%),
-  linkhover: darken(#ff8585, 10%)
+  background1: #F3F5F7,
+  background2: #E7EBEF,
+  color1: #061A40,
+  color2: #114DBB,
+  accent1: #ACDAAA,
+  accent2: #58B455,
 )

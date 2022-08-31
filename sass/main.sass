@@ -1,6 +1,6 @@
 @import "variables"
 @import "mixins"
-@import "themes/dark"
+@import "themes/light"
 
 @import "functions"
 
@@ -11,3 +11,10 @@ html
 
 *
   box-sizing: border-box
+
+body
+  @include themeable(background-color, background1)
+  @include themeable(color, color1)
+
+a
+  @include themeable('color', accent1)
