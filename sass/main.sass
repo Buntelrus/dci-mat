@@ -21,7 +21,9 @@ body
 
   > .left
     max-width: 15rem
-    outline: 2px dotted darkred
+    border-right: 1px solid
+    @include themeable(border-color, accent1)
+    //outline: 2px dotted darkred
 
   > main
     flex-grow: 1
@@ -35,7 +37,7 @@ body
 
       padding: $gap-medium
       margin-bottom: $gap-medium
-      background-color: rgba(221, 45, 74, 0.3)
+      //background-color: rgba(221, 45, 74, 0.3)
 
       > .first-row
         flex: 1 calc(100% / 2 - $gap-small * 2 - $gap-medium)
@@ -50,7 +52,42 @@ body
 
     .basket-list
       padding: $gap-medium
-      background-color: rgba(17, 77, 187, 0.51)
+      //background-color: rgba(17, 77, 187, 0.51)
+
+      > article
+        display: flex
+        padding: $gap-small
+        border-radius: $radius
+        background-color: rgba(17, 77, 187, 0.51)
+        cursor: pointer
+        height: calc($gap-large + $gap-small * 2)
+
+        .flex
+          display: flex
+          flex-flow: row wrap
+
+          > h2
+            //flex: 1 auto
+            margin: 0 0 $gap-small 0
+
+          > span
+            flex-basis: 85%
+
+        > img
+          width: $gap-large
+          height: $gap-large
+          margin-right: $gap-small
+
+        > .controls
+          display: flex
+          flex-flow: column
+          justify-content: space-around
+          background-color: rgba(255, 0, 0, 0.45)
+          width: 25%
+
+        > .message-box
+          display: none
+
 
 a
   @include themeable('color', accent1)
@@ -74,14 +111,22 @@ h1
     @include themeable(border-color, accent1)
 
 input, button
+  $shadow-color: map-get($theme, shadow1)
+  $shadow-color-hover: map-get($theme, shadow2)
+
   min-height: $gap-medium
   border: none
   outline: none
-  border-radius: 3px
+  border-radius: $radius
+  @include themeable(background-color, background2)
+  box-shadow: 0px 2px 3px 0px $shadow-color
+  box-shadow: 0px 2px 3px 0px var(--shadow1)
 
   &:focus
     border: 1px solid
     @include themeable(border-color, accent1)
+    box-shadow: 0px 2px 3px 0px $shadow-color-hover
+    box-shadow: 0px 2px 3px 0px var(--shadow2)
 
   &.no-radius-left
     border-top-left-radius: 0
