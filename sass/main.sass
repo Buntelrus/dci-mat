@@ -43,6 +43,7 @@ body
       > .icon
         flex-basis: $gap-medium
         flex-grow: 0
+        margin-left: -$gap-small
 
       > .second-row
         flex: 1 auto
@@ -74,4 +75,19 @@ h1
 
 input, button
   min-height: $gap-medium
+  border: none
+  outline: none
+  border-radius: 3px
+
+  &:focus
+    border: 1px solid
+    @include themeable(border-color, accent1)
+
+  &.no-radius-left
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
+  &.no-radius-right
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
 
