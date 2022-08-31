@@ -1,5 +1,12 @@
 @import "variables"
+@import "functions"
 
-@mixin border
-  border-radius: 5px
-  padding: $gap-small
+@mixin card
+  @include themeable(background-color, background2)
+  box-shadow: 0px 2px 3px 0px $shadow-color
+  box-shadow: 0px 2px 3px 0px var(--shadow1)
+
+@mixin cardHighlight
+  @include themeable(border-color, accent1)
+  box-shadow: 0px 2px 3px 0px $shadow-color-hover
+  box-shadow: 0px 2px 3px 0px var(--shadow2)

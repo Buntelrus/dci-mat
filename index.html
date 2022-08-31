@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Foodsharing-Baskets</title>
     <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.min.css" integrity="sha512-uj2QCZdpo8PSbRGL/g5mXek6HM/APd7k/B5Hx/rkVFPNOxAQMXD+t+bG4Zv8OAdUpydZTU3UHmyjjiHv2Ww0PA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="dist/main.js"></script>
 </head>
 <body>
@@ -24,7 +26,9 @@
 <main>
     <form action="#">
         <input id="address" name="address" type="text" class="first-row no-radius-right">
-        <button id="choose-on-map" type="button" class="first-row icon no-radius-left"><i class="map-icon"></i></button>
+        <button id="choose-on-map" type="button" class="first-row icon no-radius-left" title="pick on map">
+            <i class="fa-solid fa-map-location-dot"></i>
+        </button>
         <button id="notify-me" type="button" class="first-row">notify me</button>
         <input id="distance" name="address" type="number" class="second-row">
         <button id="open-map-view" type="button" class="second-row">map view</button>
@@ -38,8 +42,12 @@
                     natus quia sapiente veritatis voluptas?</span>
             </div>
             <div class="controls">
-                <button type="button"><i class="message"></i></button>
-                <button type="button"><i class="tel"></i></button>
+                <button type="button" class="transparent">
+                    <i class="fa-solid fa-message"></i>
+                </button>
+                <button type="button" class="transparent">
+                    <i class="fa-solid fa-phone"></i>
+                </button>
             </div>
             <div
                     class="message-box"
