@@ -15,10 +15,6 @@ permissions:
   pages: write
   id-token: write
 
-defaults:
-  run:
-    working-directory: lessons/all
-
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
@@ -48,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist
-          path: lessons/all/dist
+          path: dist
   deploy:
     needs: build
     environment:
@@ -64,12 +60,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist
-          path: lessons/all/dist
+          path: dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: lessons/all
+          path: .
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
