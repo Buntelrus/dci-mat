@@ -23,10 +23,11 @@
 </section>
 <main>
     <form action="#">
-        <input id="address" name="address" type="text">
-        <button id="choose-on-map"><i class="map-icon"></i></button>
-        <button id="notify-me">notify me</button>
-        <input id="distance" name="address" type="number">
+        <input id="address" name="address" type="text" class="first-row">
+        <button id="choose-on-map" type="button" class="first-row icon"><i class="map-icon"></i></button>
+        <button id="notify-me" type="button" class="first-row">notify me</button>
+        <input id="distance" name="address" type="number" class="second-row">
+        <button id="open-map-view" type="button" class="second-row">map view</button>
     </form>
     <div class="basket-list">
         <article>
@@ -35,8 +36,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ducimus esse fuga impedit inventore maiores
                 natus quia sapiente veritatis voluptas?</p>
             <div class="controls">
-                <button><i class="message"></i></button>
-                <button><i class="tel"></i></button>
+                <button type="button"><i class="message"></i></button>
+                <button type="button"><i class="tel"></i></button>
             </div>
             <div
                     class="message-box"
@@ -47,7 +48,7 @@
                     autocorrect="true"
                     autocapitalize="true"
             >
-                <button><i class="send"></i></button>
+                <button type="button"><i class="send"></i></button>
             </div>
         </article>
     </div>

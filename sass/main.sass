@@ -17,7 +17,7 @@ body
   @include themeable(color, color1)
   display: flex
 
-  outline: 2px dotted lime
+  //outline: 2px dotted lime
 
   > .left
     max-width: 15rem
@@ -25,8 +25,31 @@ body
 
   > main
     flex-grow: 1
-    outline: 2px dotted blue
-    background-color: red
+    //outline: 2px dotted blue
+    //background-color: red
+
+    > form
+      display: flex
+      flex-flow: row wrap
+      gap: $gap-small
+
+      padding: $gap-medium
+      margin-bottom: $gap-medium
+      background-color: rgba(221, 45, 74, 0.3)
+
+      > .first-row
+        flex: 1 calc(100% / 2 - $gap-small * 2 - $gap-medium)
+
+      > .icon
+        flex-basis: $gap-medium
+        flex-grow: 0
+
+      > .second-row
+        flex: 1 auto
+
+    .basket-list
+      padding: $gap-medium
+      background-color: rgba(17, 77, 187, 0.51)
 
 a
   @include themeable('color', accent1)
@@ -48,4 +71,7 @@ h1
     margin: $gap-small/2 auto 0 auto
     border-bottom: 2px solid
     @include themeable(border-color, accent1)
+
+input, button
+  min-height: $gap-medium
 
