@@ -15,6 +15,37 @@ html
 body
   @include themeable(background-color, background1)
   @include themeable(color, color1)
+  display: flex
+
+  outline: 2px dotted lime
+
+  > .left
+    max-width: 15rem
+    outline: 2px dotted darkred
+
+  > main
+    flex-grow: 1
+    outline: 2px dotted blue
+    background-color: red
 
 a
   @include themeable('color', accent1)
+
+  &:hover
+    @include themeable('color', accent2)
+
+p
+  padding: 0 $gap-small
+
+h1
+  text-align: center
+  @include themeable(color, accent1)
+
+  &:after
+    content: ''
+    display: block
+    width: 80%
+    margin: $gap-small/2 auto 0 auto
+    border-bottom: 2px solid
+    @include themeable(border-color, accent1)
+
