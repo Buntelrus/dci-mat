@@ -96,8 +96,19 @@ body
           > button
             font-size: 1.5rem
 
-        > .message-box
-          display: none
+      > .message-box
+        position: relative
+        margin-top: -$gap-small / 2
+        margin-bottom: $gap-medium
+
+        > div
+          height: 6rem
+          padding: $gap-small
+
+        > button
+          position: absolute
+          right: $gap-small / 2
+          bottom: 0
 
 
 a
@@ -121,7 +132,7 @@ h1
     border-bottom: 2px solid
     @include themeable(border-color, accent1)
 
-input, button
+input, div[contenteditable], button
 
   min-height: $gap-medium
   border: none
@@ -137,7 +148,7 @@ input, button
     border-top-right-radius: 0
     border-bottom-right-radius: 0
 
-input:focus, button:active
+input:focus, div[contenteditable]:focus, button:active
   border: 1px solid
   @include cardHighlight
 
@@ -154,3 +165,5 @@ button.transparent
     text-shadow: 3px 3px 1px $shadow-color-hover
     text-shadow: 3px 3px 1px var(--shadow2)
 
+.hide
+  display: none
