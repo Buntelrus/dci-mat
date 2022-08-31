@@ -4,6 +4,19 @@
 
 @import "functions"
 
+//Debug
+
+body
+  outline: 2px dotted lime
+
+  header
+    outline: 2px dotted red
+  main
+    outline: 2px dotted yellow
+  footer
+    outline: 2px dotted blue
+
+
 //Allgemeine Styles
 
 html
@@ -16,7 +29,8 @@ body
   @include themeable(background-color, background1)
   @include themeable(color, color1)
   max-width: 50rem
-  margin: 0 auto $gap-small auto
+  margin: 0 auto
+  min-height: 100vh
 
 h1
   text-align: center
@@ -158,3 +172,9 @@ section > section > *:not(h2,h3,h4,h5,h6)
 
   input[type="range"]
     width: 100%
+
+
+//flex box to body.
+//flex grow: 1 to main
+//margin auto push to bottom
+//outline
