@@ -35,10 +35,11 @@ body
   //outline: 2px dotted lime
 
   > .left
-    max-width: 20rem
     border-right: 1px solid
     @include themeable(border-color, accent1)
     //outline: 2px dotted darkred
+    @media only screen and (min-width: $media-breakpoint)
+      max-width: 20rem
 
   > main
     flex-grow: 1
@@ -52,7 +53,9 @@ body
       align-items: baseline
 
       padding: $gap-medium
-      margin-bottom: $gap-medium
+
+      @media only screen and (min-width: #{$media-breakpoint})
+        margin-bottom: $gap-medium
       //background-color: rgba(221, 45, 74, 0.3)
 
       > .first-row
@@ -75,6 +78,14 @@ body
         flex-grow: 3
   > main:not(.map)
     max-width: $basket-list-max-width
+
+  @media only screen and (max-width:  #{$media-breakpoint})
+    flex-flow: column
+
+    > .left
+      border-right: none
+      border-bottom: 1px solid
+      @include themeable(border-color, accent1)
 
 .basket-list
   display: flex
@@ -149,8 +160,9 @@ body
 
     > article.expand, .message-box.expand
       transition: width $transition-effect-time / 2 ease
-      width: 70vw
       max-width: $basket-list-max-width
+      @media only screen and (min-width: $media-breakpoint)
+        width: 70vw
 
 
 
