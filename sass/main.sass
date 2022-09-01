@@ -23,7 +23,7 @@ body
   display: flex
   width: 200vw
   overflow-x: hidden
-  transition: margin-left .5s ease
+  transition: margin-left $transition-effect-time ease
 
   &.focus-second-content
     margin-left: -100vw
@@ -92,6 +92,9 @@ body
     cursor: pointer
     height: fit-content
     @include card
+    width: 100%
+    //transition: width $transition-effect-time / 2 ease
+    z-index: 1
 
     &:hover
       @include cardHighlight
@@ -124,6 +127,8 @@ body
     position: relative
     margin-top: -$gap-small / 2
     margin-bottom: $gap-medium
+    width: 100%
+    z-index: 1
 
     > div
       height: 6rem
@@ -143,9 +148,9 @@ body
         display: none
 
     > article.expand, .message-box.expand
+      transition: width $transition-effect-time / 2 ease
       width: 70vw
       max-width: $basket-list-max-width
-      z-index: 1
 
 
 

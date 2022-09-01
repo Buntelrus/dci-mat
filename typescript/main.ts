@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
         //insert before last child (footer)
         document.body.insertBefore(contentWrapper, document.body.children[document.body.children.length - 1])
-        // navigate()
+        navigate()
     })
 
     const openMapView = document.getElementById('open-map-view')
@@ -81,20 +81,25 @@ window.addEventListener('DOMContentLoaded', async () => {
         })
         basket.addEventListener('click', () => {
             const expanded = document.querySelector('article.expand')
-            if (!messageBoxSmall.classList.contains('hide')) {
-                appendBasketWithMsgBox(basket)
+            // 1. expand && self    -> collapse             box->collapse()
+            // 2. expand && !self   -> expand->collapse()   box->collapse() due to transition
+            //                      -> self->expand()       if (shown) box->expand(), boxAppend()
+            // 3. !expand           -> self->expand()       if (shown) box->expand(), boxAppend()
+            if (expanded && expanded === basket) {
+                basket.classList.remove('expand')
+                messageBoxSmall.classList.remove('expand')
+            } else if (expanded && expanded !== basket) {
+                expanded.classList.remove('expand')
+                messageBoxSmall.classList.remove('expand') //remove always due to transition
+                //make this asynchronous to give the browser time that it can render class purging
+                setTimeout(() => {
+                    basket.classList.add('expand')
+                    if (!messageBoxSmall.classList.contains('hide')) appendBasketWithMsgBox(basket)
+                }, 0)
+            } else {
+                basket.classList.add('expand')
+                if (!messageBoxSmall.classList.contains('hide')) appendBasketWithMsgBox(basket)
             }
-            if (expanded) {
-                //collapse basket...
-                if (expanded === basket) {
-                    //and also the msg box
-                    messageBoxSmall.classList.remove('expand')
-                } else {
-                    // console.log('expanded not the same')
-                    expanded.classList.remove('expand')
-                }
-            }
-            basket.classList.toggle('expand')
         })
     })
 
@@ -116,7 +121,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                 messageBoxSmall.classList.add('hide')
                 break;
             default:
-                console.log(event.key)
+                // console.log(event.key)
         }
     })
 })
