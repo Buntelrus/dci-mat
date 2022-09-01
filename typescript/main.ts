@@ -5,11 +5,23 @@ window.addEventListener('DOMContentLoaded', () => {
         const contentWrapper = document.createElement('div')
         contentWrapper.classList.add('content')
         contentWrapper.innerHTML = html
+
+        const navigateBackButton = contentWrapper.querySelector<HTMLButtonElement>('main > button')
+        if (!navigateBackButton) throw 'navigate back button not found'
+        navigateBackButton.addEventListener('click', () => {
+            navigate()
+        })
+
         //insert before last child (footer)
         document.body.insertBefore(contentWrapper, document.body.children[document.body.children.length - 1])
         navigate()
     })
 
+    const openMapView = document.getElementById('open-map-view')
+    if (!openMapView) throw 'open map view button not found'
+    openMapView.addEventListener('click', () => {
+        navigate()
+    })
 
     //insert message box
 

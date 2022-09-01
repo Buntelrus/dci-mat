@@ -13,6 +13,11 @@ html
   box-sizing: border-box
 
 body
+  height: 100vh
+  //fix margin (where comes this from?)
+  margin-top: -4px
+  margin-bottom: -4px
+
   @include themeable(background-color, background1)
   @include themeable(color, color1)
   display: flex
@@ -193,3 +198,18 @@ button.transparent
 
 .colon::after
   content: ':'
+
+main.map
+  position: relative
+  padding: $gap-small
+
+  > img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: $radius
+
+  > button
+    position: absolute
+    top: $gap-small / 2
+    right: $gap-small / 2
