@@ -16,6 +16,16 @@ body
   @include themeable(background-color, background1)
   @include themeable(color, color1)
   display: flex
+  width: 200vw
+  overflow-x: hidden
+  transition: margin-left .5s ease
+
+  &.focus-second-content
+    margin-left: -100vw
+
+.content
+  display: flex
+  width: 100vw
 
   //outline: 2px dotted lime
 

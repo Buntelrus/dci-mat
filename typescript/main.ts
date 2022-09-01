@@ -1,4 +1,16 @@
+const map = loadMap()
+
 window.addEventListener('DOMContentLoaded', () => {
+    map.then(html => {
+        const contentWrapper = document.createElement('div')
+        contentWrapper.classList.add('content')
+        contentWrapper.innerHTML = html
+        //insert before last child (footer)
+        document.body.insertBefore(contentWrapper, document.body.children[document.body.children.length - 1])
+        navigate()
+    })
+
+
     //insert message box
 
     const basketList = document.querySelector('.basket-list')
@@ -76,4 +88,12 @@ function applyTheme(themeName: 'dark' | 'light'): void {
         // @ts-ignore
         html.style.setProperty(`--${tkey}`, themes[themeName][tkey])
     }
+}
+
+async function loadMap() {
+    return fetch('map.html').then(response => response.text())
+}
+
+function navigate() {
+    document.body.classList.toggle('focus-second-content')
 }

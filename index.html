@@ -9,96 +9,98 @@
     <script src="dist/main.js"></script>
 </head>
 <body>
-<section class="left">
-    <h1>Foodsharing Baskets</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloremque laudantium minus. Alias eaque
-        neque quia quisquam reprehenderit sapiente voluptatibus. Nemo nulla temporibus velit! A adipisci atque dolor
-        dolorem earum eius fuga ipsa itaque laborum magnam maxime necessitatibus nostrum, obcaecati quasi quibusdam quo
-        tempora. Cumque, distinctio dolores est explicabo fugit inventore iure iusto laboriosam magni nisi placeat
-        quisquam, repellat repellendus velit veniam. Ab asperiores at atque, aut doloribus, earum in iste labore maiores
-        modi mollitia perferendis provident quas quidem quis totam velit voluptate. Accusantium consectetur earum
-        eveniet ex fuga labore nisi non? Animi commodi culpa minus nisi, obcaecati provident! Accusantium adipisci amet
-        aperiam aspernatur assumenda atque corporis delectus dolor eos eum excepturi fugiat in iusto laudantium maiores
-        modi molestiae nemo nesciunt nulla perferendis placeat quas ratione reprehenderit repudiandae sequi similique,
-        sunt vitae. Aut autem consectetur explicabo ipsam itaque iure laborum porro repellendus sapiente totam. Aliquam
-        dolorem explicabo officia quod repellat?</p>
-</section>
-<main>
-    <form action="#">
-        <label for="address" class="colon">Address</label>
-        <input id="address" name="address" type="text" class="first-row no-radius-right">
-        <button id="choose-on-map" type="button" class="first-row icon no-radius-left" title="pick on map">
-            <i class="fa-solid fa-map-location-dot"></i>
-        </button>
-        <button id="notify-me" type="button" class="first-row">notify me</button>
-        <label for="distance" class="second-row colon">Distance</label>
-        <input id="distance" name="address" type="number" class="second-row">
-        <button id="open-map-view" type="button" class="second-row bigger">map view</button>
-    </form>
-    <div class="basket-list">
-        <div class="message-box hide">
-            <div
-                contenteditable="true"
-                placeholder="Request basket..."
-                spellcheck="true"
-                autocomplete="on"
-                autocorrect="true"
-                autocapitalize="true"
-            ></div>
-            <button type="button" class="transparent">
-                <i class="fa-solid fa-reply"></i>
+<div class="content">
+    <section class="left">
+        <h1>Foodsharing Baskets</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloremque laudantium minus. Alias eaque
+            neque quia quisquam reprehenderit sapiente voluptatibus. Nemo nulla temporibus velit! A adipisci atque dolor
+            dolorem earum eius fuga ipsa itaque laborum magnam maxime necessitatibus nostrum, obcaecati quasi quibusdam quo
+            tempora. Cumque, distinctio dolores est explicabo fugit inventore iure iusto laboriosam magni nisi placeat
+            quisquam, repellat repellendus velit veniam. Ab asperiores at atque, aut doloribus, earum in iste labore maiores
+            modi mollitia perferendis provident quas quidem quis totam velit voluptate. Accusantium consectetur earum
+            eveniet ex fuga labore nisi non? Animi commodi culpa minus nisi, obcaecati provident! Accusantium adipisci amet
+            aperiam aspernatur assumenda atque corporis delectus dolor eos eum excepturi fugiat in iusto laudantium maiores
+            modi molestiae nemo nesciunt nulla perferendis placeat quas ratione reprehenderit repudiandae sequi similique,
+            sunt vitae. Aut autem consectetur explicabo ipsam itaque iure laborum porro repellendus sapiente totam. Aliquam
+            dolorem explicabo officia quod repellat?</p>
+    </section>
+    <main>
+        <form action="#">
+            <label for="address" class="colon">Address</label>
+            <input id="address" name="address" type="text" class="first-row no-radius-right">
+            <button id="choose-on-map" type="button" class="first-row icon no-radius-left" title="pick on map">
+                <i class="fa-solid fa-map-location-dot"></i>
             </button>
+            <button id="notify-me" type="button" class="first-row">notify me</button>
+            <label for="distance" class="second-row colon">Distance</label>
+            <input id="distance" name="address" type="number" class="second-row">
+            <button id="open-map-view" type="button" class="second-row bigger">map view</button>
+        </form>
+        <div class="basket-list">
+            <div class="message-box hide">
+                <div
+                    contenteditable="true"
+                    placeholder="Request basket..."
+                    spellcheck="true"
+                    autocomplete="on"
+                    autocorrect="true"
+                    autocapitalize="true"
+                ></div>
+                <button type="button" class="transparent">
+                    <i class="fa-solid fa-reply"></i>
+                </button>
+            </div>
+            <article>
+                <img src="assests/profile.png" alt="profile pic">
+                <div class="flex">
+                    <h2>from <a href="">User Name</a></h2>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ducimus esse fuga impedit inventore maiores
+                        natus quia sapiente veritatis voluptas?</span>
+                </div>
+                <div class="controls">
+                    <button type="button" class="transparent">
+                        <i class="fa-solid fa-message"></i>
+                    </button>
+                    <button type="button" class="transparent">
+                        <i class="fa-solid fa-phone"></i>
+                    </button>
+                </div>
+            </article>
+            <article>
+                <img src="assests/profile.png" alt="profile pic">
+                <div class="flex">
+                    <h2>from <a href="">User Name</a></h2>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ducimus esse fuga impedit inventore maiores
+                        natus quia sapiente veritatis voluptas?</span>
+                </div>
+                <div class="controls">
+                    <button type="button" class="transparent">
+                        <i class="fa-solid fa-message"></i>
+                    </button>
+                    <button type="button" class="transparent">
+                        <i class="fa-solid fa-phone"></i>
+                    </button>
+                </div>
+            </article>
+            <article>
+                <img src="assests/profile.png" alt="profile pic">
+                <div class="flex">
+                    <h2>from <a href="">User Name</a></h2>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ducimus esse fuga impedit inventore maiores
+                        natus quia sapiente veritatis voluptas?</span>
+                </div>
+                <div class="controls">
+                    <button type="button" class="transparent">
+                        <i class="fa-solid fa-message"></i>
+                    </button>
+                    <button type="button" class="transparent">
+                        <i class="fa-solid fa-phone"></i>
+                    </button>
+                </div>
+            </article>
         </div>
-        <article>
-            <img src="assests/profile.png" alt="profile pic">
-            <div class="flex">
-                <h2>from <a href="">User Name</a></h2>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ducimus esse fuga impedit inventore maiores
-                    natus quia sapiente veritatis voluptas?</span>
-            </div>
-            <div class="controls">
-                <button type="button" class="transparent">
-                    <i class="fa-solid fa-message"></i>
-                </button>
-                <button type="button" class="transparent">
-                    <i class="fa-solid fa-phone"></i>
-                </button>
-            </div>
-        </article>
-        <article>
-            <img src="assests/profile.png" alt="profile pic">
-            <div class="flex">
-                <h2>from <a href="">User Name</a></h2>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ducimus esse fuga impedit inventore maiores
-                    natus quia sapiente veritatis voluptas?</span>
-            </div>
-            <div class="controls">
-                <button type="button" class="transparent">
-                    <i class="fa-solid fa-message"></i>
-                </button>
-                <button type="button" class="transparent">
-                    <i class="fa-solid fa-phone"></i>
-                </button>
-            </div>
-        </article>
-        <article>
-            <img src="assests/profile.png" alt="profile pic">
-            <div class="flex">
-                <h2>from <a href="">User Name</a></h2>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ducimus esse fuga impedit inventore maiores
-                    natus quia sapiente veritatis voluptas?</span>
-            </div>
-            <div class="controls">
-                <button type="button" class="transparent">
-                    <i class="fa-solid fa-message"></i>
-                </button>
-                <button type="button" class="transparent">
-                    <i class="fa-solid fa-phone"></i>
-                </button>
-            </div>
-        </article>
-    </div>
-</main>
+    </main>
+</div>
 <footer>
     <button type="button" class="transparent">
         <i class="fa-solid fa-moon"></i>
