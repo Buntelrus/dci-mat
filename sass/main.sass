@@ -73,6 +73,8 @@ body
 
       > .bigger
         flex-grow: 3
+  > main:not(.map)
+    max-width: $basket-list-max-width
 
 .basket-list
   display: flex
@@ -83,6 +85,7 @@ body
 
   > article
     display: flex
+    justify-content: space-between
     padding: $gap-small
     border-radius: $radius
     //outline: 2px dotted lime
@@ -108,14 +111,14 @@ body
       width: $gap-large
       height: $gap-large
       margin-right: $gap-small
+      border-radius: 50%
 
     > .controls
       display: flex
       flex-flow: column
       justify-content: space-around
-      //background-color: rgba(255, 0, 0, 0.45)
-      //background-color: white
-      width: 25%
+      flex-grow: 0
+      width: fit-content
 
   > .message-box
     position: relative
@@ -141,6 +144,7 @@ body
 
     > article.expand, .message-box.expand
       width: 70vw
+      max-width: $basket-list-max-width
       z-index: 1
 
 
