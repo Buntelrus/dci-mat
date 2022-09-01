@@ -102,9 +102,6 @@ body
           //background-color: white
           width: 25%
 
-          > button
-            font-size: 1.5rem
-
       > .message-box
         position: relative
         margin-top: -$gap-small / 2
@@ -117,8 +114,12 @@ body
         > button
           position: absolute
           right: $gap-small / 2
-          bottom: 0
+          bottom: $gap-small / 2
 
+footer
+  position: fixed
+  right: $gap-small / 2
+  bottom: $gap-small /2
 
 a
   @include themeable('color', accent1)
@@ -163,8 +164,10 @@ input:focus, div[contenteditable]:focus, button:active
 
 button[type='button']
   cursor: pointer
+  @include themeable(color, color1)
 
 button.transparent
+  font-size: 1.5rem
   background-color: rgba(0, 0, 0, 0) //make transparent
   box-shadow: none
   text-shadow: 3px 3px 1px $shadow-color
