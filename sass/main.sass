@@ -74,62 +74,62 @@ body
       > .bigger
         flex-grow: 3
 
-    .basket-list
+.basket-list
+  display: flex
+  flex-flow: column
+  row-gap: $gap-small
+  padding: $gap-medium
+  //background-color: rgba(17, 77, 187, 0.51)
+
+  > article
+    display: flex
+    padding: $gap-small
+    border-radius: $radius
+    //outline: 2px dotted lime
+    cursor: pointer
+    height: calc($gap-large + $gap-small * 2)
+    @include card
+
+    &:hover
+      @include cardHighlight
+
+    .flex
+      display: flex
+      flex-flow: row wrap
+
+      > h2
+        //flex: 1 auto
+        margin: 0 0 $gap-small 0
+
+      > span
+        flex-basis: 85%
+
+    > img
+      width: $gap-large
+      height: $gap-large
+      margin-right: $gap-small
+
+    > .controls
       display: flex
       flex-flow: column
-      row-gap: $gap-small
-      padding: $gap-medium
-      //background-color: rgba(17, 77, 187, 0.51)
+      justify-content: space-around
+      //background-color: rgba(255, 0, 0, 0.45)
+      //background-color: white
+      width: 25%
 
-      > article
-        display: flex
-        padding: $gap-small
-        border-radius: $radius
-        //outline: 2px dotted lime
-        cursor: pointer
-        height: calc($gap-large + $gap-small * 2)
-        @include card
+  > .message-box
+    position: relative
+    margin-top: -$gap-small / 2
+    margin-bottom: $gap-medium
 
-        &:hover
-          @include cardHighlight
+    > div
+      height: 6rem
+      padding: $gap-small
 
-        .flex
-          display: flex
-          flex-flow: row wrap
-
-          > h2
-            //flex: 1 auto
-            margin: 0 0 $gap-small 0
-
-          > span
-            flex-basis: 85%
-
-        > img
-          width: $gap-large
-          height: $gap-large
-          margin-right: $gap-small
-
-        > .controls
-          display: flex
-          flex-flow: column
-          justify-content: space-around
-          //background-color: rgba(255, 0, 0, 0.45)
-          //background-color: white
-          width: 25%
-
-      > .message-box
-        position: relative
-        margin-top: -$gap-small / 2
-        margin-bottom: $gap-medium
-
-        > div
-          height: 6rem
-          padding: $gap-small
-
-        > button
-          position: absolute
-          right: $gap-small / 2
-          bottom: $gap-small / 2
+    > button
+      position: absolute
+      right: $gap-small / 2
+      bottom: $gap-small / 2
 
 footer
   position: fixed
