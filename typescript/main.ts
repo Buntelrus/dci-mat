@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
         //insert before last child (footer)
         document.body.insertBefore(contentWrapper, document.body.children[document.body.children.length - 1])
-        navigate()
+        // navigate()
     })
 
     const openMapView = document.getElementById('open-map-view')
