@@ -1,7 +1,7 @@
 const map = loadMap()
 
-window.addEventListener('DOMContentLoaded', () => {
-    map.then(html => {
+window.addEventListener('DOMContentLoaded', async () => {
+    await map.then(html => {
         const contentWrapper = document.createElement('div')
         contentWrapper.classList.add('content')
         contentWrapper.innerHTML = html
@@ -25,12 +25,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //insert message box
 
-    const basketList = document.querySelector('.basket-list')
-    if (!basketList) throw 'baskeList not found'
+    const basketLists: NodeListOf<HTMLDivElement> = document.querySelectorAll<HTMLDivElement>('.basket-list')
+    if (!basketLists[0]) throw 'baskeList not found'
+    if (!basketLists[1]) throw 'baskeList.small not found'
 
-    const messageBox: HTMLDivElement = basketList.children[0] as HTMLDivElement
+    const messageBox: HTMLDivElement = basketLists[0].children[0] as HTMLDivElement
+    const messageBoxSmall: HTMLDivElement = basketLists[1].children[0] as HTMLDivElement
 
-    const baskets: HTMLDivElement[] = Array.from(basketList.children).slice(1) as HTMLDivElement[]
+    const baskets: HTMLDivElement[] = Array.from(basketLists[0].children).slice(1) as HTMLDivElement[]
+    const basketsSmall: HTMLDivElement[] = Array.from(basketLists[1].children).slice(1) as HTMLDivElement[]
+
+
+    function appendBasketWithMsgBox(basket: HTMLDivElement) {
+        messageBoxSmall.classList.remove('hide')
+        messageBoxSmall.classList.add('expand')
+        const basketI = basketsSmall.indexOf(basket)
+        let i = 1
+        basketsSmall.forEach(basket => {
+            if (basketI + 1 === i) {
+                // place message box after clicked basket
+                basket.style.setProperty('order', i.toString())
+                i++
+                messageBoxSmall.style.setProperty('order', i.toString())
+            } else {
+                basket.style.setProperty('order', i.toString())
+            }
+            i++
+        })
+    }
 
     baskets.forEach(basket => basket.addEventListener('click', () => {
         messageBox.classList.remove('hide')
@@ -50,6 +72,32 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }))
 
+    basketsSmall.forEach(basket => {
+        const messageButton = basket.querySelector<HTMLButtonElement>('button.msg')
+        if (!messageButton) throw 'msg button not found'
+        messageButton.addEventListener('click', event => {
+            event.stopPropagation()
+            appendBasketWithMsgBox(basket)
+        })
+        basket.addEventListener('click', () => {
+            const expanded = document.querySelector('article.expand')
+            if (!messageBoxSmall.classList.contains('hide')) {
+                appendBasketWithMsgBox(basket)
+            }
+            if (expanded) {
+                //collapse basket...
+                if (expanded === basket) {
+                    //and also the msg box
+                    messageBoxSmall.classList.remove('expand')
+                } else {
+                    // console.log('expanded not the same')
+                    expanded.classList.remove('expand')
+                }
+            }
+            basket.classList.toggle('expand')
+        })
+    })
+
     // toggle themes
     const themeButton: HTMLButtonElement = document.querySelector('footer > button') as HTMLButtonElement
     if (!themeButton) throw 'Theme button not found'
@@ -63,7 +111,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // register shortcuts
     window.addEventListener('keydown', event => {
         switch (event.key) {
-            case 'Escape': messageBox.classList.add('hide')
+            case 'Escape':
+                messageBox.classList.add('hide')
+                messageBoxSmall.classList.add('hide')
                 break;
             default:
                 console.log(event.key)

@@ -35,7 +35,7 @@ body
   //outline: 2px dotted lime
 
   > .left
-    max-width: 15rem
+    max-width: 20rem
     border-right: 1px solid
     @include themeable(border-color, accent1)
     //outline: 2px dotted darkred
@@ -87,7 +87,7 @@ body
     border-radius: $radius
     //outline: 2px dotted lime
     cursor: pointer
-    height: calc($gap-large + $gap-small * 2)
+    height: fit-content
     @include card
 
     &:hover
@@ -130,6 +130,20 @@ body
       position: absolute
       right: $gap-small / 2
       bottom: $gap-small / 2
+
+  &.small
+    > article:not(.expand)
+      > img
+        display: none
+
+      > .controls
+        display: none
+
+    > article.expand, .message-box.expand
+      width: 70vw
+      z-index: 1
+
+
 
 footer
   position: fixed
