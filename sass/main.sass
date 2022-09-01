@@ -34,6 +34,7 @@ body
       display: flex
       flex-flow: row wrap
       gap: $gap-small
+      align-items: baseline
 
       padding: $gap-medium
       margin-bottom: $gap-medium
@@ -49,6 +50,14 @@ body
 
       > .second-row
         flex: 1 auto
+
+      > input[type='number']
+        flex-grow: 0
+        width: 3rem
+        padding: 0 $gap-small / 2
+
+      > .bigger
+        flex-grow: 3
 
     .basket-list
       display: flex
@@ -168,3 +177,6 @@ button.transparent
 
 .hide
   display: none
+
+.colon::after
+  content: ':'
